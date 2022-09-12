@@ -1,0 +1,545 @@
+{
+	"info": {
+		"_postman_id": "bdcb08b8-6646-4aa4-ae4f-4fed454894f4",
+		"name": "GameRedactor",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2602640"
+	},
+	"item": [
+		{
+			"name": "GAMES",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"gameState\": {},\r\n    \"createdBy\": {\r\n        \"gameState\": \"testPlaya\",\r\n        \"description\": \"testPlayaDesk\",\r\n        \"login\": \"testPlayaLogin\",\r\n        \"inventory\": null\r\n    },\r\n    \"players\": [],\r\n    \"currentPlayerId\": 0,\r\n    \"chatHistory\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/games",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"games"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "read",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"entity\": {\r\n        \"id\": \"542c2b97bac0505474108b41\",\r\n        \"name\": \"test\",\r\n        \"description\": \"test\",\r\n        \"xSize\": 8,\r\n        \"ySize\": 8,\r\n        \"figures\": []\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/games/542c2b97bac0595474108b48",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"games",
+								"542c2b97bac0595474108b48"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "read all",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"entity\": {\r\n        \"id\": \"542c2b97bac0505474108b41\",\r\n        \"name\": \"test\",\r\n        \"description\": \"test\",\r\n        \"xSize\": 8,\r\n        \"ySize\": 8,\r\n        \"figures\": []\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/games",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"games"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"entity\": {\r\n        \"id\": \"542c2b97bac0505474108b41\",\r\n        \"name\": \"test\",\r\n        \"description\": \"test\",\r\n        \"xSize\": 8,\r\n        \"ySize\": 8,\r\n        \"figures\": []\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/games/542c2b97bac0595474108b48",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"games",
+								"542c2b97bac0595474108b48"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"entity\": {\r\n        \"id\": \"542c2b97bac0505474108b41\",\r\n        \"name\": \"test\",\r\n        \"description\": \"test\",\r\n        \"xSize\": 8,\r\n        \"ySize\": 8,\r\n        \"figures\": []\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/games/542c2b97bac0595474108b48",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"games",
+								"542c2b97bac0595474108b48"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PLAYERS",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"542c2b97bac0505474108b42\",\r\n    \"name\": \"testPlaya\",\r\n    \"description\": \"testPlayaDesk\",\r\n    \"login\": \"testPlayaLogin\",\r\n    \"inventory\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/players",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"players"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "read",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"entity\": {\r\n        \"id\": \"542c2b97bac0505474108b41\",\r\n        \"name\": \"test\",\r\n        \"description\": \"test\",\r\n        \"xSize\": 8,\r\n        \"ySize\": 8,\r\n        \"figures\": []\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/players/542c2b97bac0595474108b48",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"players",
+								"542c2b97bac0595474108b48"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "read all",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"entity\": {\r\n        \"id\": \"542c2b97bac0505474108b41\",\r\n        \"name\": \"test\",\r\n        \"description\": \"test\",\r\n        \"xSize\": 8,\r\n        \"ySize\": 8,\r\n        \"figures\": []\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/players",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"players"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"entity\": {\r\n        \"id\": \"542c2b97bac0505474108b41\",\r\n        \"name\": \"test\",\r\n        \"description\": \"test\",\r\n        \"xSize\": 8,\r\n        \"ySize\": 8,\r\n        \"figures\": []\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/players/542c2b97bac0595474108b48",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"players",
+								"542c2b97bac0595474108b48"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"entity\": {\r\n        \"id\": \"542c2b97bac0505474108b41\",\r\n        \"name\": \"test\",\r\n        \"description\": \"test\",\r\n        \"xSize\": 8,\r\n        \"ySize\": 8,\r\n        \"figures\": []\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/players/542c2b97bac0595474108b48",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"players",
+								"542c2b97bac0595474108b48"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "FIGURES",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"542c2b97bac0505474108b42\",\r\n    \"name\": \"testPlaya\",\r\n    \"description\": \"testPlayaDesk\",\r\n    \"login\": \"testPlayaLogin\",\r\n    \"inventory\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/figures",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"figures"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "read",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"entity\": {\r\n        \"id\": \"542c2b97bac0505474108b41\",\r\n        \"name\": \"test\",\r\n        \"description\": \"test\",\r\n        \"xSize\": 8,\r\n        \"ySize\": 8,\r\n        \"figures\": []\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/figures/542c2b97bac0595474108b48",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"figures",
+								"542c2b97bac0595474108b48"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "read all",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"entity\": {\r\n        \"id\": \"542c2b97bac0505474108b41\",\r\n        \"name\": \"test\",\r\n        \"description\": \"test\",\r\n        \"xSize\": 8,\r\n        \"ySize\": 8,\r\n        \"figures\": []\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/figures",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"figures"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"entity\": {\r\n        \"id\": \"542c2b97bac0505474108b41\",\r\n        \"name\": \"test\",\r\n        \"description\": \"test\",\r\n        \"xSize\": 8,\r\n        \"ySize\": 8,\r\n        \"figures\": []\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/figures/542c2b97bac0595474108b48",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"figures",
+								"542c2b97bac0595474108b48"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"entity\": {\r\n        \"id\": \"542c2b97bac0505474108b41\",\r\n        \"name\": \"test\",\r\n        \"description\": \"test\",\r\n        \"xSize\": 8,\r\n        \"ySize\": 8,\r\n        \"figures\": []\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/figures/542c2b97bac0595474108b48",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"figures",
+								"542c2b97bac0595474108b48"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "outter",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "local get",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "getsp",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "New Request Copy",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/games/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"games",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request Copy",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
