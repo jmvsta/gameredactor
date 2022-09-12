@@ -1,0 +1,13 @@
+spring:
+  data:
+    mongodb:
+      uri: ${MONGO_CONNECTION_STRING}
+
+logging:
+  level:
+    web: DEBUG
+    reactor:
+      netty:
+        http:
+          client:
+            HttpClient: DEBUG
